@@ -51,11 +51,12 @@ npm start
 The program will then initialize and function as shown in the demo.
 
 ## Technologies
-- [Axios](https://www.npmjs.com/package/axios)
-- [Bootstrap](https://getbootstrap.com/)
 - [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+- [Express](https://www.npmjs.com/package/express)
 - [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
 - [Javascript](https://www.javascript.com/)
+- [Mongoose](https://www.npmjs.com/package/mongoose)
+- [Morgan](https://www.npmjs.com/package/morgan)
 - [Node.js](https://nodejs.org/en/about/)
 
 ## Links

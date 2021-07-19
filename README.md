@@ -25,7 +25,7 @@ User should be able to sort employee by first or last name and new random employ
 ![Alt text](public/assets/images/progressive-budget.gif "Progressive-Budget")
 
 ## Program Installation
-To use this program we will need to install Node.js & React.\
+To use this program we will need to install Node.js.\
 Please use the link below to download a suitable version for your OS:
 
 [Node.js Downloads](https://nodejs.org/en/download/)

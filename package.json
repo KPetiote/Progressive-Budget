@@ -1,5 +1,5 @@
 {
-  "name": "budget-app",
+  "name": "progressive-budget",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/coding-boot-camp/unit18hw.git"
+    "url": "git+https://github.com/KPetiote/Progressive-Budget"
   },
-  "author": "",
+  "author": "Kenneth Petiote",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/coding-boot-camp/unit18hw/issues"
+    "url": "https://github.com/KPetiote/Progressive-Budget/issues"
   },
-  "homepage": "https://github.com/coding-boot-camp/unit18hw#readme",
+  "homepage": "https://github.com/KPetiote/Progressive-Budget#readme",
   "dependencies": {
     "compression": "^1.7.4",
     "express": "^4.17.1",

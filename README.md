@@ -22,7 +22,7 @@ Upon first loading the program, the end-user will be shown a database of random 
 User should be able to sort employee by first or last name and new random employees wil display each reload.
 
 ## Demo
-![Alt text](client/src/utils/images/progressive-budget.gif "Progressive-Budget")
+![Alt text](public/assets/images/progressive-budget.gif "Progressive-Budget")
 
 ## Program Installation
 To use this program we will need to install Node.js & React.\

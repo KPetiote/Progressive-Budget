@@ -9,6 +9,7 @@ const indexedDB =
     window.shimIndexedDB;
 
 let db;
+// Creates a new db request for budget database
 const request = indexedDB.open("budget", 1);
 
 request.onupgradeneeded = (event) => {
@@ -16,10 +17,6 @@ request.onupgradeneeded = (event) => {
         keyPath: "id",
         autoIncrement: true
     });
-};
-
-request.onerror = (err) => {
-    console.log(err.message);
 };
 
 request.onsuccess = (event) => {
@@ -30,15 +27,32 @@ request.onsuccess = (event) => {
     }
 };
 
+request.onerror = (err) => {
+    // Logs error message
+    console.log(err.message);
+};
+
 function saveRecord(record) {
+
+    // Creates a transaction in the pending database with read-write access
     const transaction = db.transaction("pending", "readwrite");
+
+    // Accesses the pending object store
     const store = transaction.objectStore("pending");
+    
+    // Adds a record to the store with add method
     store.add(record);
 }
 
 function checkDatabase() {
+
+    // Opens a transaction in pending db
     const transaction = db.transaction("pending", "readonly");
+
+    // Accesses all pending object store
     const store = transaction.objectStore("pending");
+    
+    // Gets all records from the store and sets them to a variable
     const getAll = store.getAll();
 
     getAll.onsuccess = () => {
@@ -53,12 +67,19 @@ function checkDatabase() {
         })
         .then((response) => response.json())
         .then(() => {
+
+            // If successful, a transaction in pending db opens
             const transaction = db.transaction("pending", "readwrite");
+
+            // Accesses all pending object store
             const store = transaction.objectStore("pending");
+
+            // Clears all items in store
             store.clear();
         });
         }
     };
 }
 
+// Checks if app came back online
 window.addEventListener("online", checkDatabase);

@@ -61,7 +61,7 @@ The program will then initialize and function as shown in the demo.
 
 ## Links
 - [Github Repository URL](https://github.com/Kpetiote/Progressive-Budget)
-- [Heroku Live Site](https://kenpet-progressive-budget.herokuapp.com/)
+- [Heroku Live Site](https://kenpet-progressivebudget.herokuapp.com/)
 ## Contribution
 None
 

@@ -18,7 +18,7 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
-const mongoUri = process.env.MONGODB_URI || "mongodb://localhost/progressive-budget";
+const mongoUri = process.env.MONGODB_URI || "mongodb://localhost/ProgressiveBudget";
 mongoose.connect(mongoUri, {
   useNewUrlParser: true,
   useFindAndModify: false,

@@ -22,7 +22,8 @@ app.use(express.static("public"));
 const mongoUri = process.env.MONGODB_URI || "mongodb://localhost/progressive-budget";
 mongoose.connect(mongoUri, {
   useNewUrlParser: true,
-  useFindAndModify: false
+  useFindAndModify: false,
+  useUnifiedTopology: true
 });
 
 // routes

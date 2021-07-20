@@ -5,8 +5,9 @@ const express = require("express");
 const logger = require("morgan");
 const mongoose = require("mongoose");
 const compression = require("compression");
+const apiRoutes = require("./routes/api.js");
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 const app = express();
 
@@ -18,7 +19,8 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
-mongoose.connect("mongodb://localhost/budget", {
+const mongoUri = process.env.MONGODB_URI || "mongodb://localhost/progressive-budget";
+mongoose.connect(mongoUri, {
   useNewUrlParser: true,
   useFindAndModify: false
 });
